@@ -1,1 +1,2 @@
 123
+This is a new line of text added by the script.
