@@ -1,5 +1,3 @@
-# convert numbers to words
+def times2minus2(num):
 
-def number_to_words(num):
-
-    return str(num)
+    return
