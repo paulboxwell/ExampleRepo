@@ -2,3 +2,4 @@
 This is a new line of text added by the script.
 hello world
 hello world
+hello world
