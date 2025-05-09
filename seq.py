@@ -1,3 +1,3 @@
 def times2minus2(num):
-
-    return
+    result = num * 2 - 2
+    return result
