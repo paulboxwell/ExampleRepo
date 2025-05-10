@@ -1,6 +1,6 @@
+
 class Seq:
-    def times2minus2(self, num):
-        result = num * 2 - 2
-        # added a print statement to check the output
+    def times5_minus4(self, num):
+        result = num * 5 - 4
         print(result)
         return result
