@@ -1,0 +1,2 @@
+```py
+print("Hello, World!")
