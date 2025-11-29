@@ -1,2 +1,0 @@
-```py
-print("Hello, World!")
