@@ -3,7 +3,8 @@ import json
 from datetime import datetime
 
 def query_ollama_raw(model: str, prompt: str) -> dict:
-    url = "http://localhost:11434/api/generate"
+    url = "http://host.docker.internal:11434/api/generate"
+
     headers = {
         "Content-Type": "application/json"
     }
