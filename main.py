@@ -1,9 +1,8 @@
 import requests
 import json
-import os
 from datetime import datetime
 
-def query_ollama_raw(model: str, prompt: str, log_dir: str = "logs") -> dict:
+def query_ollama_raw(model: str, prompt: str) -> dict:
     url = "http://localhost:11434/api/generate"
     headers = {
         "Content-Type": "application/json"
@@ -31,18 +30,14 @@ def query_ollama_raw(model: str, prompt: str, log_dir: str = "logs") -> dict:
     else:
         log_data["error"] = f"HTTP {response.status_code}: {response.text}"
 
-    os.makedirs(log_dir, exist_ok=True)
-    filename = f"{datetime.now().strftime('%Y%m%d_%H%M%S')}_raw_log.json"
-    filepath = os.path.join(log_dir, filename)
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(log_data, f, indent=2)
-
     return log_data
 
 def main():
     print("Hello from Python inside Jenkins!")
 
+    log_data = query_ollama_raw("llama3", "What is the capital of France?")
 
+    print(json.dumps(log_data, indent=2))
 
 if __name__ == "__main__":
     main()
