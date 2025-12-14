@@ -36,7 +36,7 @@ def query_ollama_raw(model: str, prompt: str) -> dict:
 def main():
     print("Hello from Python inside Jenkins!")
 
-    log_data = query_ollama_raw("llama3", "What is the capital of France?")
+    log_data = query_ollama_raw("llama3", "What is the capital of the UK?")
 
     print(json.dumps(log_data, indent=2))
 
